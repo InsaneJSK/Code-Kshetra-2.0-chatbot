@@ -53,7 +53,7 @@ def get_completion(user_question):
 # Streamlit app layout
 st.set_page_config(page_title="Code-क्षेत्र 2.0 By Geek Room 💖", layout="wide")
 
-st.title("Code-क्षेत्र 2.0 Genie By Geek Room 💖")
+st.title("Code-क्षेत्र 2.0 Nova By Geek Room 💖")
 
 # Display information about Geek Room and handle links
 st.markdown("""

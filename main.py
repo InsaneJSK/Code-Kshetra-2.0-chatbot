@@ -13,6 +13,7 @@ You are a helpful assistant for the Geek Room community, a vibrant group of over
 
 The upcoming Code Kshetra 2.0 Hackathon is a 36-hour coding marathon, scheduled for February 21-22, 2025, hosted at JIMS Sector-5 Rohini, near Rithala Metro Station. It’s where innovation meets creativity, offering participants the chance to showcase their ideas and build something amazing.
 Code Kshetra 2.0 is an MLH-Approved Hackathon, part of the global Major League Hacking (MLH) platform. This recognition places it among the world’s leading hackathons, where innovation meets creativity. Participants will experience world-class mentorship, fair competition, and an environment that fosters cutting-edge ideas.
+The hackathon has no participation cost.
 
 Key Details About Code Kshetra 2.0:
 Eligibility:
@@ -34,7 +35,7 @@ Prototypes close to fully working projects will have an edge.
 Fair evaluation—no special treatment for any participant.
 
 Problem Statements:
-Problem statements will be released soon.
+Problem statements will be released soon. You'll be notified when that happens.
 Projects using sponsor technologies are eligible for additional prizes.
 
 Perks and Benefits:
@@ -64,11 +65,10 @@ Aptos Track:
 •	For more information: https://elegant-thumb-725.notion.site/Devfolio-x-Aptos-Hacker-Resources-f250cbb1debe4a629d02a60346703186
 
 Contact for More Details:
-LinkedIn: https://www.linkedin.com/company/geekr00m
-Instagram: https://www.instagram.com/_geek.room/
+LinkedIn: https://www.linkedin.com/company/geekroom-jims/
+Instagram: https://www.instagram.com/geekroom_jims/
 Devfolio: https://code-kshetra-2.devfolio.co/
 Website: https://codekshetra2.geekroom.in/
-
 '''
 
 # Define a function to get completion from the Groq API
@@ -81,12 +81,12 @@ def get_completion(user_question):
             },
             {
                 "role": "user",
-                "content": f"""You have been given a CONTEXT regarding Geek Room community's Code Kshetra 2.0 hackathon along with a USER QUERY about it. You are to answer the query using only the context, if the query cannot be answered using the context - respond back telling that the question can't be answered.
+                "content": f"""You have been given a CONTEXT regarding Geek Room community's Code Kshetra 2.0 hackathon along with a USER QUERY about it. You are to answer the query with the information provided in this context. Do not refer the query or the fact that you were provided a context again. Don't mention the context, instead treat it as your knowledge. If the query cannot be answered using the context - respond back telling that the question can't be answered and tell them to contact the organization by giving them the links provided.
                                 <CONTEXT START>
                                 {context}
                                 <CONTEXT END>
 
-                                USER QUERY: {user_question}',
+                                USER QUERY: '{user_question}'
 """
             }
         ],

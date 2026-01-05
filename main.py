@@ -96,7 +96,7 @@ def get_completion(user_question):
 """
             }
         ],
-        model="llama3-8b-8192",
+        model="groq/compound-mini",
     )
     return chat_completion.choices[0].message.content
 
